@@ -34,20 +34,17 @@
 
     --radius: 0.5rem;
 
+    --coin-gold: 45 94% 58%;
+    --coin-gold-light: 45 94% 68%;
+    --coin-shadow: 45 94% 40%;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -98,4 +95,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes coin-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.coin-pulse {
+  animation: coin-pulse 0.3s ease-in-out;
+}
+
+@keyframes score-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-pop {
+  animation: score-pop 0.3s ease-in-out;
 }
